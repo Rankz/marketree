@@ -47,6 +47,7 @@ const User = (sequelize) => sequelize.define ('user', {
 
   affiliateLink: {
     type: Sequelize.DataTypes.STRING,
+    defaultValue: ''
   }
 })
 
