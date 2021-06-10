@@ -1,0 +1,25 @@
+{
+  "name": "marketree",
+  "version": "1.0.0",
+  "description": "Marketree App",
+  "main": "./client",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rankz/marketree.git"
+  },
+  "author": "Ian Michaels",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rankz/marketree/issues"
+  },
+  "homepage": "https://github.com/Rankz/marketree#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.2"
+  }
+}
