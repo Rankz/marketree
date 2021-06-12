@@ -10,7 +10,10 @@ app.use(cors());
 app.use(express.json());
 app.use(router);
 
-db.sequelize.sync()
+//'SET FOREIGN_KEY_CHECKS = 0'
+db.sequelize.query('SET FOREIGN_KEY_CHECKS = 0')
+.then( sql => {
+  db.sequelize.sync()//{force:true}
 .then(result => {
   // console.log(result);
   app.listen(port, ()=> {
@@ -20,6 +23,8 @@ db.sequelize.sync()
 .catch(err => {
     console.log(err);
   })
+})
+
   
   
 

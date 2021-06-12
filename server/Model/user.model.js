@@ -1,4 +1,5 @@
 const Sequelize = require('sequelize');
+const Event = require('./event.model')
 
 
 const User = (sequelize) => sequelize.define ('user', {
@@ -48,8 +49,14 @@ const User = (sequelize) => sequelize.define ('user', {
   affiliateLink: {
     type: Sequelize.DataTypes.STRING,
     defaultValue: ''
+  }, 
+  children: {
+    type: Sequelize.DataTypes.TEXT,
+    defaultValue: JSON.stringify([])
   }
 })
+
+
 
 
 

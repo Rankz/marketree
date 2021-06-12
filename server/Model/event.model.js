@@ -1,5 +1,7 @@
 const Sequelize = require('sequelize');
 
+const User = require('./user.model')
+
 
 const Event = (sequelize) => sequelize.define('event', {
   id: {
@@ -22,7 +24,15 @@ const Event = (sequelize) => sequelize.define('event', {
   eventLink: {
     type: Sequelize.DataTypes.STRING,
     allowNull: false
+  },
+
+  invitedAttendees: {
+    type: Sequelize.DataTypes.INTEGER,
+    defaultValue: 0
   }
+
 });
+
+
 
 module.exports = Event;
