@@ -1,14 +1,16 @@
+* {
 
-.affiliateSignUp {
+}
+
+.inviteMoreStatus {
   font-family: Helvetica, Arial, sans-serif;
   color: white;
 }
 
-.affiliateSignUp_affiliate-buttonLink button {
+.inviteMoreStatus_affiliate-buttonLink button {
   background-color: white;
-  border:4px solid;
-  border-color: gold;
-  color: #e56606;
+  border:none;
+  color: #e56606;;
   padding:7px;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;

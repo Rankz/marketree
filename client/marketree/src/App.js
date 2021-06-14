@@ -22,7 +22,14 @@ function App() {
     <MainHeader />
     <EventDashboard />
     <Footer />
+    
+    <MainHeader />
     <Invite />
+    <Footer />
+    
+    <MainHeader />
+    <MainNavBar />
+    <MainUserDashboard />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

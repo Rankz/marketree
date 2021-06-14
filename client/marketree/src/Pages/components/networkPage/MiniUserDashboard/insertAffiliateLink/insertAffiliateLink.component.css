@@ -1,0 +1,41 @@
+* {
+
+}
+
+.insertAffiliateLink {
+  font-family: Helvetica, Arial, sans-serif;
+  color: white;
+}
+
+.insertAffiliateLink__heading {
+
+}
+
+.insertAffiliateLink__text {
+
+}
+
+.insertAffiliateLink__form {
+  display: flex;
+
+}
+
+.insertAffiliateLink__form button {
+  background-color: white;
+  border:none;
+  color: #e56605;
+  padding:7px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  
+}
+
+.insertAffiliateLink__form form input {
+  border: 1px solid;
+  border-color: #e56605;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  margin: 5px 10px 5px 0;
+  color: black
+}

@@ -3,14 +3,14 @@ import './userNetworkList.component.css';
 import User from '../user/user.component';
 
 
-export default function userNetworkList (props) {
+export default function UserNetworkList (props) {
   
  
 
   
   return (
-    <div>
-      <header><h1>Codeworks Eventing</h1></header>
+    <div className="userNetworkList">
+      <User />
     </div>
   )
 

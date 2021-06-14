@@ -30,7 +30,6 @@
   display:flex;
   align-items: center;
 
-
 }
 
 
@@ -69,5 +68,6 @@ button {
 
 .homePageHeader_login-fields-passwordLable {
   margin-right: 10px;
+  margin-left: 15px;
   
 }

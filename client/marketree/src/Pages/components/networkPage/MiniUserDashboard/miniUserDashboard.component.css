@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+.miniUserDashboard {
+  border: 1px solid;
+  border-color: #e56606;
+  padding: 10px;
+  width:25vw;
+}
+
+.lineBreak {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  border: 1px solid;
+  border-color: #e56606;
+}
+
+.actionBox {
+  background-color: #e56606;
+  padding: 20px;
+  text-align: left;
+
+}

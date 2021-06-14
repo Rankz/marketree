@@ -1,0 +1,61 @@
+.user {
+  display:flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing:border-box;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: Helvetica, Arial, sans-serif;
+
+}
+
+.user p {
+  margin: 10px;
+  font-size:16px;
+  color:grey;
+  font-weight:bold;
+}
+
+
+.user__image {
+  border: 2px solid;
+  padding-right:-54px;
+  width: 50%;
+  padding: 0;
+  height: auto;
+  
+  
+}
+
+.user img{
+  width: 65px;
+  height: auto;
+  border-radius: 50%;
+  padding: 0;
+  border:2px solid;
+  border-color: #e56606;
+  /* float: left; */
+  margin-right:20px;
+
+}
+
+.user__firstName {
+
+}
+
+.user__lastName {
+
+}
+
+.user__joinedOn {
+
+}
+
+.user__branches {
+
+}
+
+.user__status p {
+  color:#e56606;
+
+}

@@ -8,8 +8,13 @@ export default function NetworkView (props) {
 
   
   return (
-    <div>
-      <header><h1>Codeworks Eventing</h1></header>
+    <div className="networkViewButtons">
+      <div className="viewMyBranches">
+        <button type="button">My Branches</button>
+      </div>
+      <div className="viewMyBranches">
+        <button type="button">Entire Netowrk</button>
+      </div>
     </div>
   )
 

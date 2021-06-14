@@ -1,0 +1,38 @@
+.emailField form {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  width: 100%
+}
+
+input {
+  width: 100%;
+}
+
+
+.emailField__input {
+  width:80%;
+  margin: 5px 10px 5px 0;
+}
+
+
+.emailField__input input {
+  border: 1px solid;
+  border-color: #e56605;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  margin: 5px 10px 5px 0;
+}
+
+.emailField__button button {
+
+  background-color: #e56605;
+  border:none;
+  color: white;
+  padding:7px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  float: right;
+  overflow: auto;
+}

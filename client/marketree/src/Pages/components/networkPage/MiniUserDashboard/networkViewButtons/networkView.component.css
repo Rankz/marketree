@@ -1,0 +1,16 @@
+.networkViewButtons button {
+  background-color: grey;
+  border:none;
+  color: white;
+  padding:7px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  margin:5px;
+  
+}
+
+.networkViewButtons {
+  display: flex;
+  margin:5px;
+  clear:both;
+}

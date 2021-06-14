@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+  padding:0px;
+  margin:0px;
+}
+
+.mainUserDashboardContainer {
+  height:100vh;
+  background-image: url('../../../home/images/Marketree-Website-Homepage-background.jpg');
+  padding-top: 20px;
+}
+
+.mainDashBoard {
+  height:90vh;
+  margin-left:10%;
+  margin-right:10%;
+  background-color: white;
+  display:flex;
+  justify-content: space-between;
+
+
+}

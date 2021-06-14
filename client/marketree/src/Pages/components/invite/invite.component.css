@@ -1,0 +1,59 @@
+* {
+  box-sizing:border-box;
+  margin:0px;
+  padding:0px;
+}
+
+.inviteDashboard {
+  height:70vh;
+  background-image: url('../../home/images/Marketree-Website-Homepage-background.jpg');
+  background-repeat: no-repeat;
+  background-size: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+  padding-right: 100px;
+}
+
+.inviteDashboard_sendInvite {
+  display:flex;
+}
+
+.inviteDashboard_sendInvite--section img {
+  height: 100%
+}
+
+
+.inviteDashboard_sendInvite--fields {
+  margin-bottom: 30px;
+}
+
+.inviteDashboard_sendInvite--Instructions {
+  width:55%;
+  margin-top:40px;
+  margin-bottom: 20px;
+}
+
+.inviteDashboard_sendInvite--confirmation {
+  width:60vw;
+}
+
+.inviteDashboard_sendInvite {
+  border: 3px solid;
+  border-color: black;
+  width: 100%;
+  margin-left: 20%;
+  
+}
+
+h1 {
+  text-align: left;
+  width: 400px;
+  font-family: Helvetica, Arial, sans-serif;
+  margin-right:20px;
+}
+

@@ -8,8 +8,10 @@ export default function InviteButton (props) {
 
   
   return (
-    <div>
-      <header><h1>Codeworks Eventing</h1></header>
+    <div className="inviteButtons">
+      <div className="inviteButton">
+        <button type="button">Invite Friends/Family</button>
+      </div>
     </div>
   )
 

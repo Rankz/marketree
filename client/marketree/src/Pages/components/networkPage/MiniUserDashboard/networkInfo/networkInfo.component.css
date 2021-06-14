@@ -1,0 +1,57 @@
+*{
+  box-sizing: border-box;
+  padding:0px;
+  margin:0px;
+}
+
+
+.networkInfo {
+  border: 3px solid;
+  border-color:#e56606;
+  font-family: Helvetica,Arial, sans-serif;
+  
+}
+
+.networkInfo_Heading {
+  background-color: #e56606;;
+}
+
+.networkInfo_Heading h1 {
+  color: white;
+  font-family: Helvetica,Arial, sans-serif;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right:5px;
+  font-size:16px;
+}
+
+.networkInfo_branchInfo {
+  text-align: left;
+  background-color: #FDF5F0 ;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 5px;
+  padding-right:5px;
+}
+
+.networkInfo_branchInfo--branchText {
+
+}
+
+.networkInfo__numFormat {
+  font-size: 24px;
+  color:#e56606;
+  font-weight: bold;
+}
+
+.branchHeading {
+  color: grey;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.normalText {
+  color:grey;
+  font-size: 16;
+}

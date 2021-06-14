@@ -6,6 +6,7 @@ import InsertAffiliateLink from './insertAffiliateLink/insertAffiliateLink.compo
 import InviteButton from './inviteButton/inviteButton.component';
 import NetworkInfo from './networkInfo/networkInfo.component';
 import NetworkView from './networkViewButtons/networkView.component';
+import InviteMoreStatus from './inviteMoreStatus/inviteMoreStatus.component';
 
 
 
@@ -15,8 +16,15 @@ export default function MiniUserDashboard (props) {
 
   
   return (
-    <div>
-      <header><h1>Codeworks Eventing</h1></header>
+    <div className="miniUserDashboard">
+      <NetworkInfo />
+      <div className="lineBreak"></div>
+      <NetworkView />
+      <div className="actionBox">
+        <InviteMoreStatus />
+        <AffiliateSignUp />
+        <InsertAffiliateLink />
+      </div>
     </div>
   )
 

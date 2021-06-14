@@ -40,7 +40,7 @@ export default function Header (props) {
             </div>
             
             <div className="homePageHeader_login-button" >
-              <button type="submit">Log in</button>
+              <button type="button">Log in</button>
             </div>
           </div>
         </form>
