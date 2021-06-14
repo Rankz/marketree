@@ -1,0 +1,52 @@
+.voteButtons {
+  display:flex;
+  justify-content: space-between;
+  width:100%;
+  margin-top:-20px;
+  padding-bottom:10px;
+ 
+}
+
+.voteButtons__green button {
+  background-color: #04AA6D;
+  border: none;
+  border-radius:500%;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+}
+
+.voteButtons__amber button {
+  background-color:orange;
+  border: none;
+  border-radius:500%;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+}
+
+.voteButtons__red button {
+  background-color:red;
+  border: none;
+  border-radius:500%;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+}
+
+h1{
+  font-size:18px;
+}
+

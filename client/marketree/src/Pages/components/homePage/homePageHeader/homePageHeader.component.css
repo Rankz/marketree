@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+
+.homePageHeader {
+  background-color: #e56606;
+  padding-top:4%;
+  padding-bottom: 3%;
+  height: 15vh;
+  width: 100%;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 50px;
+  padding-right:150px;
+}
+
+.homePageHeaderLogo {
+  /* width: 250px;
+  height: 114px; */
+}
+
+.homePageHeader_login {
+
+}
+
+
+
+.homePageHeader_login-fields {
+  display:flex;
+  align-items: center;
+
+
+}
+
+
+
+.homePageHeader_login-fields label {
+  display:block;
+  text-align: left;
+  color:white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size:15px;
+  
+}
+
+.homePageHeader_login-button {
+  vertical-align: middle;
+  padding-top:17px;
+  margin:0px;
+
+}
+ 
+input {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+button {
+  color: #e56606;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight:bold;
+  padding:5px;
+}
+
+.homePageHeader_login-fields-email {
+  margin-right: 10px;
+}
+
+.homePageHeader_login-fields-passwordLable {
+  margin-right: 10px;
+  
+}

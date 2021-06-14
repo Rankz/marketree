@@ -1,0 +1,17 @@
+.createProfile_picContainer {
+  background-color: white;
+  border: 1px solid;
+  border-color:  #e56606;
+  border-radius:500%;
+  color: white;
+  padding: 60px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+}
+
+.createProfile_picContainer form {
+  display: inline-block;
+}

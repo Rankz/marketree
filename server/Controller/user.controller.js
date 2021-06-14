@@ -45,7 +45,7 @@ exports.createNewUser = async (req, res) => {
   }
 }
 
-exports.findUser= async (req, res) => {
+exports.findUserTree= async (req, res) => {
   try {
     const { id } = req.body;
 

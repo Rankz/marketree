@@ -1,0 +1,46 @@
+* {
+  box-sizing:border-box;
+  margin:0px;
+  padding:0px;
+}
+
+.dashboard {
+  height:70vh;
+  background-image: url('../../../home/images/Marketree-Website-Homepage-background.jpg');
+  background-repeat: no-repeat;
+  background-size: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+  padding-right: 100px;
+}
+
+
+.dashboard_infoSection {
+  display:flex;
+  
+  
+
+}
+
+.dashboard_infoSection-image {
+  margin-bottom: 30px;
+}
+
+.dashboard_video-text--section {
+  width:55%;
+  margin-top:40px;
+  
+}
+
+.dashboard_infoSection img {
+  height: 100%;
+}
+
+.dashboard_register {
+  width:60vw;
+}

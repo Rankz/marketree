@@ -1,0 +1,21 @@
+.homePageInfo {
+  color:#e56605;
+  width:100%;
+  text-align: left;
+}
+
+.homePageInfo-header {
+  
+  font-family: Helvetica,Arial, sans-serif;
+}
+
+h1{
+  font-weight: bold;
+  font-size:22px;
+}
+
+p{
+  font-size:14px;
+  font-weight: 500;
+  margin-top:5px;
+}

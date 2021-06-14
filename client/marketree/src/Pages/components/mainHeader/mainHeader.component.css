@@ -1,0 +1,12 @@
+.mainHeader {
+  background-color: #e56606;
+  padding-top:4%;
+  padding-bottom: 3%;
+  height: 15vh;
+  width: 100%;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 50px;
+  padding-right:50px;
+}
