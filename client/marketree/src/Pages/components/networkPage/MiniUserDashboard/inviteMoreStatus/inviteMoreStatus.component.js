@@ -1,10 +1,12 @@
 import react from 'react';
 import './inviteMoreStatus.component.css';
 import InviteButton from '../inviteButton/inviteButton.component';
+import { useParams } from 'react-router-dom' 
 
 export default function InviteMoreStatus (props) {
   
- 
+  const params = useParams();
+  const dynamicUrl = `/invite/${params.id}`
 
   
   return (
@@ -16,7 +18,9 @@ export default function InviteMoreStatus (props) {
         <p>Go out and invite more friends and family to have a look at your opportunity. Your Marketree will build quicker that way!</p>
       </div>
       <div className="inviteMoreStatus_affiliate-buttonLink">
-        <button type="button">INVITE MORE PEOPLE</button>
+        <form action={dynamicUrl}>
+          <button type="submit">INVITE MORE PEOPLE</button>
+        </form>
       </div>
       
     </div>

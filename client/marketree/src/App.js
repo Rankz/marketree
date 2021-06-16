@@ -1,49 +1,56 @@
-import logo from './logo.svg';
 import './App.css';
-import Header from './Pages/components/homePage/homePageHeader/homePageHeader.component'
-import Dashboard from './Pages/components/homePage/homePageDashboard/homePageDashboard.component'
-import Footer from './Pages/components/footer/footer.component'
-
-import MainHeader from './Pages/components/mainHeader/mainHeader.component'
-import EventDashboard from './Pages/components/eventPage/eventPageDashboard/eventPageDashboard.component'
-import MainNavBar from './Pages/components/mainNavBar/mainNavBar.component';
-import Invite from './Pages/components/invite/invite.component'
-import MainUserDashboard from './Pages/components/networkPage/mainUserDashboard/mainUserDashboard.component';
+import { useState, useEffect } from 'react';
+import { Route, Redirect } from 'react-router-dom';
 
 
+import Invite from './Pages/invite/invite'
+import Network from './Pages/network/network';
+import Event from './Pages/event/event'
+import Home from './Pages/home/home'
+
+
+import {getUserTree, getSingleUser, sendEmailInvite} from './services/ApiService';
+
+const dummyUser = {
+  firstName: "Jane",
+  lastName: "Doe",
+  affiliateLink: "",
+  children:[],
+  id:1
+
+
+}
 
 function App() {
+
+  const [userTree, setUserTree] = useState(dummyUser);
+
+
+
   return (
     <div className="App">
-    <Header />
-    <Dashboard />
-    <Footer />
 
-    <MainHeader />
-    <EventDashboard />
-    <Footer />
+    <Route path="/home">
+      <Home />
+    </Route>
     
-    <MainHeader />
-    <Invite />
-    <Footer />
+    <Route path="/event-page/:id">
+     <Event setUserTree={setUserTree}/>
+    </Route>
     
-    <MainHeader />
-    <MainNavBar />
-    <MainUserDashboard />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Route path="/my-network/:id">
+     <Network getSingleUser={getSingleUser} getUserTree={getUserTree} setUserTree={setUserTree} userTree={userTree}/>
+    </Route>
+    
+    <Route path="/invite/:id">
+     <Invite sendEmailInvite={sendEmailInvite}/>
+    </Route>
+
+    <Route exact path="/">
+     <Redirect to="/home" />
+    </Route>
+
+
     </div>
   );
 }

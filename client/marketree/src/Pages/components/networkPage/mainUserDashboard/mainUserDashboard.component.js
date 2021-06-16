@@ -6,19 +6,19 @@ import StatusBar from '../statusBar/statusBar.component';
 import UserNetworkList from '../userNetworkList/userNetworkList.component';
 
 
-export default function MainUserDashboard (props) {
+export default function MainUserDashboard ({userTree, totalNetwork}) {
   
- 
+  console.log('mainuserDash',totalNetwork)
 
   
   return (
     <div className="mainUserDashboardContainer">
       <div className="mainDashBoard">
         <div className="mainDashbord__userNetworkList">
-          <UserNetworkList />
+          <UserNetworkList userTree={userTree} totalNetwork={totalNetwork} />
         </div>
         <div className="mainDashbord__miniUserDashboard">
-          <MiniUserDashboard />
+          <MiniUserDashboard userTree={userTree} totalNetwork={totalNetwork} />
         </div>
       </div>
     </div>

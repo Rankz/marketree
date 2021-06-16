@@ -7,11 +7,21 @@ import VoteButtons from '../eventPageVoteButtons/eventVoteButtons.component';
 
 import CreateProfile from '../createProfile/createProfile.component'
 
-export default function EventDashboard (props) {
+import { useState } from 'react';
+
+export default function EventDashboard ({addNewUser}) {
+
+  const [displaySignUp, setDisplaySignUp] = useState(false);
+
+
+
+  console.log(displaySignUp);
   
   
   return (
     <div className="dashboard">
+
+    {displaySignUp}
     
       <div className="dashboard_infoSection">
         <img src={TreeLogo}></img>
@@ -20,14 +30,13 @@ export default function EventDashboard (props) {
             <EventVideo />
           </div>
           <div className="dashboard_infoSection-butons">
-          <VoteButtons />  
+          <VoteButtons setDisplaySignUp={setDisplaySignUp} />  
           </div>
         </div>
       </div>
 
       <div className="dashboard_register"> 
-      <SignUpForm />
-        
+        {displaySignUp &&  <SignUpForm addNewUser={addNewUser} />}
       </div>
     </div>
   )

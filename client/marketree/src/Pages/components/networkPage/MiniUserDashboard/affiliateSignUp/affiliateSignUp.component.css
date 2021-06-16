@@ -2,6 +2,10 @@
 .affiliateSignUp {
   font-family: Helvetica, Arial, sans-serif;
   color: white;
+  margin-bottom: 30px;
+  border: 2px solid;
+  border-color: white;
+  padding:10px;
 }
 
 .affiliateSignUp_affiliate-buttonLink button {
@@ -15,4 +19,5 @@
 
   margin:10px;
   margin-left:0px;
+  
 }

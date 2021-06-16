@@ -5,13 +5,12 @@ import HeaderLogo from '../../../home/images/Marketree-logo_Fnl_White_without-tr
 
 export default function Header (props) {
   
-
   
   return (
     <div className="homePageHeader">
       <img className = "homePageHeaderLogo" src={HeaderLogo} />
       <div className="homePageHeader_login">
-        <form>
+        <form action="/my-network/1">
           <div className="homePageHeader_login-fields">
             <div className="homePageHeader_login-fields-emailLable">
               <label >Email address</label>
@@ -33,14 +32,14 @@ export default function Header (props) {
               // placeholder="Email" 
               // label="Title"
               // value ={title} 
-              // type="text" 
+              type="password" 
               // onChange={(e => setTitle(e.target.value))}
               > 
               </input>
             </div>
             
             <div className="homePageHeader_login-button" >
-              <button type="button">Log in</button>
+              <button type="submit">Log in</button>
             </div>
           </div>
         </form>

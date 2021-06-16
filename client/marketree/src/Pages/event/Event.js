@@ -1,15 +1,27 @@
-import './Event.css'
-import Header from './Pages/components/homePage/homePageHeader/homePageHeader.component'
-import Dashboard from './Pages/components/homePage/homePageDashboard/homePageDashboard.component'
+import './event'
+import MainHeader from '../components/mainHeader/mainHeader.component'
+import EventDashboard from '../components/eventPage/eventPageDashboard/eventPageDashboard.component'
 import Footer from '../components/footer/footer.component'
 
-import Footer from '../components/footer/footer.component'
+import { useState, useEffect } from 'react';
+import { registerNewUser, getUserTree, getSingleUser } from '../../services/ApiService';
 
 
-function Event() {
+
+function Event({ setUserTree }) {
+
+  const addNewUser = async (firstName, lastName, email, password, parentId) => {
+    const newUser = await registerNewUser(firstName, lastName, email, password, parentId);
+    setUserTree(prev => {
+      console.log(prev)
+      return [...prev, newUser];
+    })}
+
+
   return (
-    <div className="Event">
-
+    <div className="event">
+      <MainHeader />
+      <EventDashboard addNewUser={addNewUser}/>
       <Footer />
     </div>
   );

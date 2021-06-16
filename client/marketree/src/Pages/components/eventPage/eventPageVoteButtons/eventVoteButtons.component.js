@@ -1,17 +1,25 @@
 import react from 'react';
 import './eventVoteButtons.component.css';
+import { useState } from 'react';
 
 
-export default function VoteButtons (props) {
+export default function VoteButtons ({setDisplaySignUp}) {
   
- 
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+     setDisplaySignUp(true)
+  }
+
 
   
   return (
     <div className="container">
       <div className="voteButtons">
         <div className="voteButtons__green">
-          <button className="voteButtons__green-button"></button>
+          <form onSubmit={submitHandler}>
+            <button type="submit" className="voteButtons__green-button"></button>
+          </form>
         </div>
         <div className="voteButtons__amber">
           <button className="voteButtons__amber-button"></button>

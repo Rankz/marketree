@@ -10,7 +10,7 @@ import HomePageInfo from '../homePage/homePageInfoSection/homePageInfoSection.co
 
 import MainNavBar from '../mainNavBar/mainNavBar.component';
 
-export default function Invite (props) {
+export default function InviteDashboard ({sendEmailInvite}) {
   
  
 
@@ -26,7 +26,7 @@ export default function Invite (props) {
               <h1>Inviting freinds is an important part of getting your Marketree to grow and expand, exponentially. Once your Marketree is big enough, you can then start growing your business.</h1>
             </div>
             <div className="inviteDashboard_sendInvite--fields" >
-              <EmailForm />
+              <EmailForm sendEmailInvite={sendEmailInvite} />
               <EmailForm />
               <EmailForm />
               <EmailForm />

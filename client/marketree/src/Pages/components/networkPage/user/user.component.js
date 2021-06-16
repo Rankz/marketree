@@ -1,9 +1,32 @@
 import react from 'react';
 import './user.component.css';
-import Image from '../../../home/images/3549-Ian-Michaels-©Michael-Wharley-2018-5.jpg'
+import Image from '../../../network/images/woman Icon.jpeg'
+import { useState, useEffect } from 'react';
+import { getUserTree } from '../../../../services/ApiService';
 
 
-export default function User (props) {
+
+const dummyUser = {
+  firstName: "Jane",
+  lastName: "Doe",
+  affiliateLink: "",
+  children:[],
+  id:1
+
+
+}
+
+export default function User ({firstName, pic, lastName, children, user}) {
+
+  
+  
+  console.log('users', children)
+
+  let length;
+
+  if (children) {
+    length = children.length
+  }
   
  const date = new Date().toString();
 
@@ -12,16 +35,13 @@ export default function User (props) {
     <div className="user">
         <img src={Image}></img>
       <div className="user__firstName">
-        <p>Ian</p>
+        <p>{firstName}</p>
       </div>
       <div className="user__lastName">
-        <p>Michaels</p>
-      </div>
-      <div className="user__joinedOn">
-        <p>22/06/2021</p>
+        <p>{lastName}</p>
       </div>
       <div className="user__branches">
-        <p><span>2</span> branches = <span>72 </span>memebers</p>
+        <p><span>{length}</span> branches</p>
       </div>
       <div className="user__status">
         <p>Active</p>

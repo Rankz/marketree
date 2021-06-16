@@ -1,14 +1,14 @@
-import './Home.css'
-import Header from '../components/homePage/homePageHeader/homePageHeader.component'
-import Dashboard from '../components/homePage/homePageDashboard/homePageHeader.component'
-import Footer from '../components/footerComponent/footer.component'
+import './home.css'
+import Header from '../components/homePage/homePageHeader/homePageHeader.component';
+import HomePageDashboard from '../components/homePage/homePageDashboard/homePageDashboard.component'
+import Footer from '../components/footer/footer.component'
 
 
 function Home() {
   return (
-    <div className="Home">
+    <div className="home">
       <Header />
-      <Dashboard />
+      <HomePageDashboard />
       <Footer />
     </div>
   );
