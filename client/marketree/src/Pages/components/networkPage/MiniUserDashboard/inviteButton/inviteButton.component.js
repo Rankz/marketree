@@ -3,12 +3,11 @@ import './inviteButton.component.css';
 import { useParams } from 'react-router-dom' 
 
 
-export default function InviteButton (props) {
+export default function InviteButton () {
   
  const params = useParams();
  const dynamicUrl = `/invite/${params.id}`
 
-  
   return (
     <div className="inviteButtons">
       <div className="inviteButton">

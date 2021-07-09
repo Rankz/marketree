@@ -2,10 +2,7 @@ import react from 'react';
 import './stageOneStatus.component.css';
 
 
-export default function StageOneStatus (props) {
-  
- 
-
+export default function StageOneStatus () {
   
   return (
     <div>

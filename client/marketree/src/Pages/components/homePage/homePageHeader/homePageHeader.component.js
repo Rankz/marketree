@@ -15,25 +15,15 @@ export default function Header (props) {
             <div className="homePageHeader_login-fields-emailLable">
               <label >Email address</label>
               <input
-              className="homePageHeader_login-fields-email"
-              // placeholder="Email" 
-              // label="Title"
-              // value ={title} 
-              // type="text" 
-              // onChange={(e => setTitle(e.target.value))}
-              > 
+              className="homePageHeader_login-fields-email"> 
               </input>
             </div>
             
             <div className="homePageHeader_login-fields-passwordLable">
               <label >Password</label>
               <input
-              className="homePageHeader_login-fields-password"
-              // placeholder="Email" 
-              // label="Title"
-              // value ={title} 
-              type="password" 
-              // onChange={(e => setTitle(e.target.value))}
+                className="homePageHeader_login-fields-password"
+                type="password"
               > 
               </input>
             </div>

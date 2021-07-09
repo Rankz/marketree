@@ -1,27 +1,15 @@
 import react from 'react';
 import './CurrentUser.component.css';
-import Image from '../../../network/images/man icon.png'
-import { useState, useEffect } from 'react';
-import { getUserTree } from '../../../../services/ApiService';
-
-
+import Image from '../../../network/images/man icon.png';
 
 
 
 export default function CurrentUser ({userTree, totalNetwork}) {
-
-  
-  
-  
-
   let length;
 
   if (userTree.children) {
     length = userTree.children.length
   }
-  
- const date = new Date().toString();
-
   
   return (
     <div className="Currentuser">

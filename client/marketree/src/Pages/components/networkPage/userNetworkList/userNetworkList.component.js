@@ -2,13 +2,12 @@ import react from 'react';
 import './userNetworkList.component.css';
 import User from '../user/user.component';
 import CurrentUser from '../CurrentUser/CurrentUser.component';
-import ParentUser from '../ParentUser/parentUser.component';
 
 
 export default function UserNetworkList ({userTree, totalNetwork}) {
   
-  const branches = userTree.children.map(user => <User user={user} firstName={user.firstName} pic={user.profilePicture} lastName={user.lastName}  children={user.children} />)
-
+  const branches = userTree.children
+  .map(user => <User user={user} firstName={user.firstName} pic={user.profilePicture} lastName={user.lastName}  children={user.children} />)
   
   return (
     <div className="userNetworkList">

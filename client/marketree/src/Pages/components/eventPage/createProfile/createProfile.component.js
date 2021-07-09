@@ -3,10 +3,6 @@ import './createProfile.component.css';
 
 
 export default function CreateProfile (props) {
-  
- 
-
-  
   return (
     <div className="createProfile">
 

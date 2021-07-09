@@ -18,18 +18,11 @@ const dummyUser = {
 
 export default function User ({firstName, pic, lastName, children, user}) {
 
-  
-  
-  console.log('users', children)
-
   let length;
 
   if (children) {
     length = children.length
-  }
-  
- const date = new Date().toString();
-
+  };
   
   return (
     <div className="user">

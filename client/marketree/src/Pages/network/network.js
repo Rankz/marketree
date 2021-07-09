@@ -35,9 +35,6 @@ function Network({userTree, setUserTree, getUserTree}) {
 
   const totalNetwork = findTotalNetwork(userTree)
 
-
-    console.log('THIS IS MY ALL MY MINIONS!', totalNetwork );
-
   return (
     <div className="Home">
       <Header />

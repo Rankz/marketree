@@ -5,14 +5,11 @@ import { useState } from 'react';
 
 export default function VoteButtons ({setDisplaySignUp}) {
   
-
   const submitHandler = (e) => {
     e.preventDefault();
      setDisplaySignUp(true)
   }
 
-
-  
   return (
     <div className="container">
       <div className="voteButtons">
@@ -30,16 +27,13 @@ export default function VoteButtons ({setDisplaySignUp}) {
       </div>
 
       <div className="homePageInfo">
-      <div className="homePageInfo-header">
-        <h1>After watching the event, click the appropriate coloured button</h1>
-
+        <div className="homePageInfo-header">
+          <h1>After watching the event, click the appropriate coloured button</h1>
+        </div>
+        <div className="homePageInfo-body">
+          <p>select 'green' for interested, 'amber' if you have more questions for *insert parent name*, or 'red' if it's not for you.</p>
+        </div>
       </div>
-      <div className="homePageInfo-body">
-        <p>select 'green' for interested, 'amber' if you have more questions for *insert parent name*, or 'red' if it's not for you.</p>
-      </div>
-    </div>
-    
-    
     </div>
     
   )

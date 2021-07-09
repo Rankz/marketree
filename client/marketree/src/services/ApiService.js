@@ -32,8 +32,6 @@ export const getSingleUser = async (id) => {
 
 
 export const registerNewUser = async (firstName, lastName, email, password, parentId) => {
-  const body =JSON.stringify({firstName, lastName, email, password});
-  console.log(body);
   try {
     const response = await fetch(`${baseUrl}/user/${parentId}`, {
       method: 'POST',
@@ -42,7 +40,6 @@ export const registerNewUser = async (firstName, lastName, email, password, pare
         'Content-Type': 'application/json'
       }
     })
-    console.log('anything!!!')
     return await response.json();
 
   } catch (err) {
@@ -50,9 +47,6 @@ export const registerNewUser = async (firstName, lastName, email, password, pare
   }
 };
 
-export const addProfilePic = async () => {
-
-}
 
 export const updateStatus = async (id, newStatus) => {
   try {

@@ -3,11 +3,7 @@ import './eventVideo.component.css';
 import videoImage from '../../../event/images/Marketree-Website-VideoImage.jpg'
 
 
-export default function EventVideo (props) {
-  
- 
-
-  
+export default function EventVideo () {
   return (
     <div className="eventVideo">
       <img src={videoImage}></img>

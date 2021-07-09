@@ -4,19 +4,11 @@ import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useHistory } from "react-router-dom";
 
-
-
-
-
 export default function SignUpForm ({addNewUser}) {
   
   const history = useHistory()
-
-
-
   const params = useParams()
   const parentId = params.id;
-
   const routeChange = () =>{ 
     let path = `event-page/${parentId}`; 
     history.push(path);
@@ -28,20 +20,14 @@ export default function SignUpForm ({addNewUser}) {
   const [password, setPassword] = useState('');
   const [rePassword, setRePassword] = useState('');
 
-
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(parentId)
-    
     addNewUser(firstName, lastName, email, password, parentId);
-
     setFirstName('');
     setLastName('');
     setEmail('');
     setPassword('');
     setRePassword('');
-
-
   }
 
   

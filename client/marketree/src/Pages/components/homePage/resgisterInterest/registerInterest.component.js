@@ -2,10 +2,7 @@ import react from 'react';
 import './registerInterest.component.css';
 
 
-export default function RegisterInterest (props) {
-  
- 
-
+export default function RegisterInterest () {
   
   return (
     <div className="signUpForm__Wrapper">
@@ -15,40 +12,26 @@ export default function RegisterInterest (props) {
       </div>
       <form className="signUpForm"> 
       <div className="signUpForm__name">
-      <input
-      className="signUpForm__name-first"
-      placeholder="First Name" 
-      // label="Title"
-      // value ={title} 
-      // type="text" 
-      // onChange={(e => setTitle(e.target.value))}
-      >
-      </input> 
-
-      <input
-      className="signUpForm__name-last"
-      placeholder="Last Name" 
-      // label="Title"
-      // value ={title} 
-      // type="text" 
-      // onChange={(e => setTitle(e.target.value))}
-      > 
-      </input>
+        <input
+          className="signUpForm__name-first"
+          placeholder="First Name"
+        >
+        </input> 
+        <input
+          className="signUpForm__name-last"
+          placeholder="Last Name"
+        > 
+        </input>
       </div>
       <div className="signUpForm__input--email">
           <input
             placeholder="Email address" 
-            // label="Title"
-            // value ={title} 
-            // type="text" 
-            // onChange={(e => setTitle(e.target.value))}
           > 
           </input>
         </div>
       <div className="signUpForm__submit--button">
         <button type="submit">Register</button>
-        <p>By joining Marketree you agree to our terms and conditions</p>
-      
+        <p>By joining Marketree you agree to our terms and conditions</p>  
       </div> 
       </form>
     </div>

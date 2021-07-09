@@ -5,12 +5,11 @@ import HomePageInfo from '../homePageInfoSection/homePageInfoSection.component';
 import RegisterInterest from '../../homePage/resgisterInterest/registerInterest.component';
 import TreeLogo from '../../../home/images/Marketree-Website-Homepage-Tree.png'
 
-export default function HomePageDashboard (props) {
+export default function HomePageDashboard () {
   
   
   return (
     <div className="dashboard">
-    
       <div className="dashboard_infoSection">
         <img src={TreeLogo}></img>
         <div className="dashboard_video-text--section">
@@ -22,12 +21,10 @@ export default function HomePageDashboard (props) {
           </div>
         </div>
       </div>
-
       <div className="dashboard_register">
         <RegisterInterest />
         
       </div>
     </div>
   )
-
 }

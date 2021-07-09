@@ -5,6 +5,7 @@ import Footer from '../components/footer/footer.component'
 
 
 function Home() {
+  
   return (
     <div className="home">
       <Header />

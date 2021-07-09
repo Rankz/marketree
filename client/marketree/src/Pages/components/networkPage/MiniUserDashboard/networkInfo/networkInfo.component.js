@@ -5,18 +5,12 @@ import './networkInfo.component.css';
 export default function NetworkInfo ({ userTree, totalNetwork }) {
   
   let branches;
-
-  console.log('networkInfo',totalNetwork)
  
   if (userTree.children) {
     branches = userTree.children.length;
   } else {
     branches = 0;
   }
-  
-  // const networkTotal;
- 
-
   
   return (
     <div className="networkInfo">

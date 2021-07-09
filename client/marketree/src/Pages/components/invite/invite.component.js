@@ -2,19 +2,10 @@ import react from 'react';
 import './invite.component.css';
 import TreeImage from '../../home/images/Marketree-Website-Homepage-Tree.png'
 import EmailForm from './emailForm/emailForm.component';
-
-import InviteFriends from '../../home/images/heroImage7.jpg'
-import HeroImage from '../homePage/homePageHeroImage/homePageHeroImage.component';
-
-import HomePageInfo from '../homePage/homePageInfoSection/homePageInfoSection.component';
-
 import MainNavBar from '../mainNavBar/mainNavBar.component';
 
 export default function InviteDashboard ({sendEmailInvite}) {
-  
- 
 
-  
   return (
     <div className="container">
       <MainNavBar />
@@ -31,15 +22,10 @@ export default function InviteDashboard ({sendEmailInvite}) {
               <EmailForm />
               <EmailForm />
               <EmailForm />
-    
-              
             </div>
           </div>
         </div>
-
         <div className="inviteDashboard_sendInvite--confirmation"> 
-        
-          
         </div>
       </div>
     </div>

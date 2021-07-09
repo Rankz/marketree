@@ -7,18 +7,13 @@ import { addAffiliateLink } from '../../../../../services/ApiService';
 export default function InsertAffiliateLink ({userTree}) {
   
   const id = userTree.id;
-  
   const [url, setUrl] = useState('');
 
   const submitHandler = (e) => {
     e.preventDefault();
     addAffiliateLink(id, url);
-
     setUrl('');
-
-
   }
-
   
   return (
     <div className="insertAffiliateLink">
@@ -40,8 +35,7 @@ export default function InsertAffiliateLink ({userTree}) {
           </input>
           <button type="submit">SUBMIT AFFILIATE LINK</button>
         </form>
-      </div>
-      
+      </div>   
     </div>
   )
 

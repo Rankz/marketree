@@ -2,10 +2,7 @@ import react from 'react';
 import './networkView.component.css';
 
 
-export default function NetworkView (props) {
-  
- 
-
+export default function NetworkView () {
   
   return (
     <div className="networkViewButtons">

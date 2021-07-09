@@ -8,24 +8,14 @@ import { getSingleUser, getUserTree } from '../../../../services/ApiService'
 export default function EmailForm ({sendEmailInvite}) {
   
   const [email, setEmail] = useState('');
-  
-
   const params = useParams();
   const id = params.id;
-
-
-  
   const submitHandler = (e) => {
-   
     e.preventDefault();
-
-    sendEmailInvite(email, id);
-    
+    sendEmailInvite(email, id);  
     setEmail('');
   }
- 
 
-  
   return (
     <div className="emailField">
       <form onSubmit={submitHandler}>
@@ -42,7 +32,6 @@ export default function EmailForm ({sendEmailInvite}) {
         <div className="emailField__button">
           <button type="submit">Send</button>
         </div>
-
       </form>
     </div>
   )

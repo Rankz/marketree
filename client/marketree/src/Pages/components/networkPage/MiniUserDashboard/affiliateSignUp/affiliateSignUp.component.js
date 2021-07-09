@@ -15,7 +15,6 @@ export default function AffiliateSignUp ({userTree}) {
     affiliateUrl = "https://www.marykay.co.uk/en-gb/find-an-independent-beauty-consultant?babc=true"
     parentName = "whoever invited you to Marketree"
   }
-
   
   return (
     <div className="affiliateSignUp">
@@ -30,7 +29,6 @@ export default function AffiliateSignUp ({userTree}) {
           <button type="submit" >START MY BUSINESS</button>
         </form>
       </div>
-      
     </div>
   )
 

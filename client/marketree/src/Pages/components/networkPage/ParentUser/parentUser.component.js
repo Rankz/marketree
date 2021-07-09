@@ -9,25 +9,16 @@ import { getUserTree } from '../../../../services/ApiService';
 
 
 export default function ParentUser ({userTree, totalNetwork}) {
-
   
   let Parent;
-
-  console.log('PARENT', userTree.parent_id)
 
   if (userTree.parent_id) {
     Parent = userTree.parent_id;
   }
-  
-
-  let length;
 
   if (userTree.children) {
     length = userTree.children.length
   }
-  
- const date = new Date().toString();
-
   
   return (
     <div className="Parentuser">
@@ -42,7 +33,6 @@ export default function ParentUser ({userTree, totalNetwork}) {
       <div className="user__status">
         <p>PARENT</p>
       </div>
-
     </div>
   )
 

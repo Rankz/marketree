@@ -2,14 +2,10 @@ import react from 'react';
 import './mainUserDashboard.component.css';
 
 import MiniUserDashboard from '../MiniUserDashboard/miniUserDashboard.component';
-import StatusBar from '../statusBar/statusBar.component';
 import UserNetworkList from '../userNetworkList/userNetworkList.component';
 
 
 export default function MainUserDashboard ({userTree, totalNetwork}) {
-  
-  console.log('mainuserDash',totalNetwork)
-
   
   return (
     <div className="mainUserDashboardContainer">
@@ -23,5 +19,4 @@ export default function MainUserDashboard ({userTree, totalNetwork}) {
       </div>
     </div>
   )
-
 }

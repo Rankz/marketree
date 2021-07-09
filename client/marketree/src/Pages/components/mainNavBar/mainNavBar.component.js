@@ -8,7 +8,6 @@ export default function MainNavBar (props) {
   const params = useParams();
   const dynamicUrl = `/my-network/${params.id}`;
 
-  
   return (
     <div className= "navBar">
     <div className="navBar-menu">

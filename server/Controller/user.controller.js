@@ -1,4 +1,8 @@
 const db = require ('../db')
+const nodemailer = require("nodemailer");
+require('dotenv').config();
+
+
 
 
 const recursiveFind =  async (user) => {
@@ -10,22 +14,51 @@ const recursiveFind =  async (user) => {
         
         return await recursiveFind(member.dataValues)
       }))
-      
-      console.log('allChildren', allChildren);
+
       return {...user, children: allChildren}
     }
     return user;
   } catch (err) {
     console.log(err)
   }
+}
+
+exports.sendEmailInvite = async (req, res) => {
+
+  const { recipientEmail, firstName, lastName } = await req.body;
+  const {id} = await req.params;
+  const fullName = `${firstName} ${lastName}`
+
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    host: "smtp.gmail.com",
+    auth: {
+      user: 'marketreeapp@gmail.com',
+      pass: 'gabriel0208'
+    }
+  });
+  
+  const mailOptions = {
+    from: 'hello@marketree.co.uk',
+    to: recipientEmail,
+    subject: 'Thought this might be of interest',
+    html: `<p style='font-size: 18px'>You have been invited to attend an event to start your very own beauty business, by ${fullName}. Click the link below: <B></B>http://localhost:3001/event-page/${id}</p>`
+
+  }
+
+  transporter.sendMail(mailOptions, (err, data) => {
+    if(err) {
+      console.log('error occured', err)
+    } else {
+      res.send('Email has been sent')
+    }
+  })
 
 }
 
-
 exports.createNewUser = async (req, res) => {
-
+  
   try {
-    const {firstName, lastName, email, password} = await req.body;
     const newUser = await db.User.create(req.body);
     const {parent_id} = req.params;
     if(parent_id) {
@@ -36,7 +69,7 @@ exports.createNewUser = async (req, res) => {
         id:parent_id
       }})
     }
-
+    
     res.status(201).send(newUser);
 
   } catch (err) {
@@ -45,14 +78,32 @@ exports.createNewUser = async (req, res) => {
   }
 }
 
+exports.findSingleUser = async (req, res) => {
+  try {
+    const {id} = await req.body;
+    const singleUser = await db.User.findOne({
+      where: {id}, 
+      include:[ {
+        model: db.User,
+        as: 'parent_id'
+      }]
+    })
+
+    if(!singleUser) {
+      res.status(204).send('unable to find this userProfile');
+    } else {
+      res.status(200).send(singleUser.dataValues)
+    }
+
+  } catch (err) {
+    res.status(500).send(`unable to find userProfile ${err}`);
+    console.log(err);
+  }
+}
+
 exports.findUserTree= async (req, res) => {
   try {
-    const { id } = req.body;
-
-    // get the parent
-    // grab the interested user
-    // itterate through children
-    // for each child reccursively get their children and keep going until no more children to grab
+    const { id } = req.params;
 
     const user = await db.User.findOne({
       where: {id}, 
@@ -61,22 +112,9 @@ exports.findUserTree= async (req, res) => {
         as: 'parent_id'
       }]
     })
-    console.log(user)
+
     const tree = await recursiveFind(user.dataValues)
 
-
-    // const userProfile = await db.User.findAll({
-    //   include:[ {
-    //     model: db.User,
-    //     as: 'parent_id'
-    //   }, {
-    //     model: db.User, 
-    //     as: 'children_id'
-    //   }],
-    //   where: {
-    //     id: id
-    //   }
-    // });
     if(!tree) {
       res.status(204).send('unable to find this userProfile');
     } else {
@@ -91,15 +129,13 @@ exports.findUserTree= async (req, res) => {
 exports.updateUserProfile = async (req, res) => {
 
   try {
-    const { aboutMe, profilePicture, userId } = await req.body;
-    const { id } = req.body;
+    const { profilePicture, id } = await req.body;
     const userProfile =  await db.User.findByPk(id);
     if(!userProfile) {
       res.status(204).send('unable to find this userProfile');
     } else {
-      // userProfile.aboutMe = aboutMe;
-      // userProfile.profilePicture = profilePicture;
-      userProfile.userId = userId;
+
+      userProfile.profilePicture= profilePicture;
       await userProfile.save();
       res.status(200).send(userProfile)
     } 
@@ -134,9 +170,9 @@ exports.updateUserStatus = async (req, res) => {
 exports.updateAffiliateLink = async (req, res) => {
   
   try {
-    const { affiliateLink } = await req.body;
-    const { id } = req.body;
+    const { affiliateLink, id} = await req.body;
     const userProfile =  await db.User.findByPk(id);
+    
     if(!userProfile) {
       res.status(204).send('unable to find this user profile');
     } else {

@@ -2,11 +2,7 @@ import './event'
 import MainHeader from '../components/mainHeader/mainHeader.component'
 import EventDashboard from '../components/eventPage/eventPageDashboard/eventPageDashboard.component'
 import Footer from '../components/footer/footer.component'
-
-import { useState, useEffect } from 'react';
-import { registerNewUser, getUserTree, getSingleUser } from '../../services/ApiService';
-
-
+import { registerNewUser } from '../../services/ApiService';
 
 function Event({ setUserTree }) {
 
@@ -16,7 +12,6 @@ function Event({ setUserTree }) {
       console.log(prev)
       return [...prev, newUser];
     })}
-
 
   return (
     <div className="event">

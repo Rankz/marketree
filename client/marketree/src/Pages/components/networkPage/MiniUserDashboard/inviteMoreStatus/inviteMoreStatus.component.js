@@ -1,14 +1,12 @@
 import react from 'react';
 import './inviteMoreStatus.component.css';
-import InviteButton from '../inviteButton/inviteButton.component';
 import { useParams } from 'react-router-dom' 
 
-export default function InviteMoreStatus (props) {
+export default function InviteMoreStatus () {
   
   const params = useParams();
   const dynamicUrl = `/invite/${params.id}`
 
-  
   return (
     <div className="inviteMoreStatus">
       <div className="inviteMoreStatus_heading">
