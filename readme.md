@@ -2,7 +2,7 @@
 
 
 
-![](/Users/ianmichaels/Desktop/Solo-Project-Presentation/Marketree logo_Fnl.png)
+![](https://user-images.githubusercontent.com/12765479/125202385-49a72180-e26b-11eb-9fbe-80907ccd4744.png)
 
 
 
