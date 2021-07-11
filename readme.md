@@ -4,7 +4,9 @@
 
 
 
-<img align="center" src="https://user-images.githubusercontent.com/12765479/125202385-49a72180-e26b-11eb-9fbe-80907ccd4744.png">
+<p align="center">
+   <img src="https://user-images.githubusercontent.com/12765479/125202385-49a72180-e26b-11eb-9fbe-80907ccd4744.png">
+</p>
 
 Marketree is a web application aimed at helping network marketers (.e.g Avon Distributors) grow their businesses quicker, easier, and with a higher degree of predictability. The app allows users to create substantial amounts of "buzz" around thier chosen network marketing opportunity , before making a single investment. 
 
