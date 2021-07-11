@@ -18,7 +18,7 @@ export default function MiniUserDashboard ({ userTree, totalNetwork }) {
       <div className="lineBreak"></div>
       <NetworkView />
       <div className="actionBox">
-      {totalNetwork.length < 12 ? <InviteMoreStatus /> : 
+      {totalNetwork.length < 11 ? <InviteMoreStatus /> : 
         <div>
           <AffiliateSignUp userTree={userTree} />
           <InsertAffiliateLink userTree={userTree} />

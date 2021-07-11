@@ -1,8 +1,11 @@
 const Sequelize = require('sequelize');
+require('dotenv').config()
 const Event = require ('./Model/event.model');
 const User = require ('./Model/user.model');
 
-const sequelize = new Sequelize('marketree', 'root', 'gabriel0208', {
+const PASSWORD = process.env.MYSQL_PASSWORD
+
+const sequelize = new Sequelize('marketree', 'root', PASSWORD, {
   dialect: 'mysql',
   host: 'localhost'
 });
